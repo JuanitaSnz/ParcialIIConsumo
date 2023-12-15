@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial II</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  <h1 style="text-align: center; margin-top: 5px;">Consumo API</h1>
+  <div class ="container">
+    <div class="table-responsive">
+      <table class="table table-striped table bordered">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Calorias</th>
+            <th scope="col">Vegetariano</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Comentarios</th>
+          </tr>
+        </thead>
+        <tbody id="tBody">
+        </tbody>
+      </table> 
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <h2>Consultar Plato por _ObjectId</h2>
+    <form id="formConsulta">
+        <div class="mb-3">
+            <label for="objectId" class="form-label">_ObjectId</label>
+            <input type="text" class="form-control" id="objectId" required>
+        </div>
+        <button  type="button" class="btn btn-primary" id="buttonConsult">Consultar</button>
+    </form>
+</div>
+
+<div class="container mt-4">
+  <h2>Objeto Encontrado</h2>
+  <table class="table table-bordered">
+      <thead>
+          <tr>
+              <th scope="col">id</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Calorias</th>
+              <th scope="col">Vegetariano</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Comentarios</th>
+          </tr>
+      </thead>
+      <tbody id="foundObjectTableBody"></tbody>
+  </table>
+</div>
+
+
+  <div class="container mt-4">
+    <h2>Añadir Nuevo Plato</h2>
+    <form id="formObjeto">
+      <div class="mb-3">
+        <label for="id" class="form-label">id</label>
+        <input type="text" class="form-control" id="id" required>
+      </div>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="calorias" class="form-label">Calorias</label>
+        <input type="number" class="form-control" id="calorias" required>
+      </div>
+      <div class="mb-3">
+        <label for="vegetariano" class="form-label">Vegetariano</label>
+        <select class="form-select" id="vegetariano" required>
+          <option value="true">Sí</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="valor" class="form-label">Valor</label>
+        <input type="text" class="form-control" id="valor" required>
+      </div>
+      <div class="mb-3">
+        <label for="comentarios" class="form-label">Comentarios</label>
+        <textarea class="form-control" id="comentarios" rows="3"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" id="buttonSend">Agregar Plato</button>
+    </form>
+  </div>
+
+    
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
